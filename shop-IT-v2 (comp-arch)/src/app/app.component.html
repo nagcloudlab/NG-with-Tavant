@@ -1,0 +1,11 @@
+<div class="container">
+
+ <app-header [value]="title"></app-header>
+
+ <app-cart-badge [value]="cart.length"></app-cart-badge>
+
+  <div class="list-group-item" *ngFor="let item of items;let idx=index;let isEven=even;">
+      <app-item [value]="item" (buy)="addToCart($event)"></app-item>
+  </div>
+
+</div>
