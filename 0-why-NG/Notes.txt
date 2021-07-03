@@ -1,0 +1,47 @@
+
+
+
+
+
+UI     => data + style + interacvity
+web-ui => HTML + css + javascript  + browser-apis
+
+
+
+-----------------------------------------------
+MVC arch  
+-----------------------------------------------
+
+javascript F.W & Lib
+
+    -> knockout.js
+    -> backbone.js
+    -> ember.js
+    -> dojo
+    -> Ext.JS
+    -> Angular.js 
+    ...
+
+
+-----------------------------------------------
+Component  arch
+-----------------------------------------------
+
+
+how to build UI Components for Web ?
+
+
+using third-party lib & F.W ?
+
+
+ => react.js using virtual DOM
+ => Angular  using Zone.js      ( our fucus )
+ => Vue.js
+ => Ember.js
+
+
+ -----------------------------------------------
+
+
+
+

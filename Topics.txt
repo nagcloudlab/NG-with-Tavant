@@ -1,0 +1,58 @@
+
+
+ng topics
+----------------
+
+core topics
+-------------
+
+    directives
+    ----------
+
+        1. component
+
+            => directive + template , independet UI fragment
+
+        2. structural 
+
+            => to change structure of comp's template
+
+            e.g
+
+               NgIf
+               NgFor
+               NgSwitch
+               
+        3. attribute / property
+
+               NgClass 
+
+
+    data-binding
+    ------------
+
+        1. interpolation 
+
+                syntax :
+
+                        {{expression}}
+
+        2. property
+
+                syntax : 
+
+                    <element 
+                        prop1="static-value" 
+                        prop2="{{expression}}"
+                        [prop3]="expression"
+                    />
+
+        3. event
+
+                syntax :
+
+                    <element (event-name)="handler($event,custom-value)"/>
+
+        
+
+        
