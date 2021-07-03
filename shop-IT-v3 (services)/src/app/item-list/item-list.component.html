@@ -1,0 +1,4 @@
+
+  <div class="list-group-item" *ngFor="let item of items | slice : 0 : 10 ;let idx=index;let isEven=even;">
+    <app-item [value]="item"></app-item>
+  </div>
