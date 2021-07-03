@@ -2,6 +2,11 @@
 
 /*
 
+
+
+// DI ( Dependency Injection )
+
+
  shop-IT
  ---------
 
@@ -85,9 +90,6 @@ class PriceMatrix_v2 implements PriceMatrix {
  * 
  *          => via constructor
  *          => via methods 
- * 
- * 
- * 
  * 
  * 
  */
