@@ -1,0 +1,26 @@
+<table class="table">
+    <thead>
+        <tr>
+            <td>S-No</td>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Qty</td>
+            <td>Total</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cartLine of cart;let idx=index">
+            <td>{{idx+1}}</td>
+            <td>{{cartLine.name}}</td>
+            <td>{{cartLine.price|currency:cartLine.currencyCode}}</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- 
+<hr />
+    <a (click)="handleItemsView()" class="btn btn-link">items-view</a>
+<hr /> 
+-->

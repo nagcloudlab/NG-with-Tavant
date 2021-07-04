@@ -17,10 +17,20 @@ export class ProductViewComponent implements OnInit {
 
     // this.itemId = this.route.snapshot.params['itemId']
 
-    this.route.params
-      .subscribe(params => {
-        this.itemId = params['itemId']
-      })
+    // this.route.params
+    //   .subscribe(params => {
+    //     this.itemId = params['itemId']
+    //   })
+
+    // or
+
+    this.route.paramMap.subscribe(params => {
+      this.itemId = params.get('itemId')
+    })
+
+    this.route.data.subscribe(data => {
+      console.log(data['message']);
+    })
 
   }
 

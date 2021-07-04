@@ -7,13 +7,19 @@ import { Observable } from 'rxjs';
 })
 export class ProductsService {
 
+  url = "http://localhost:3000/api/items"
+
   constructor(private http: HttpClient) { }
 
-
   getItems() {
-    const url = "http://localhost:3000/api/items"
-    const stream: Observable<any> = this.http.get(url)
+    const stream: Observable<any> = this.http.get(this.url)
     return stream;
+  }
+  deleteItem(itemId: number) {
+    return this.http.delete(`${this.url}/${itemId}`)
+  }
+  saveProduct(product: any) {
+    return this.http.post(this.url, product)
   }
 
 }

@@ -6,6 +6,8 @@
             <td>Id</td>
             <td>Name</td>
             <td>Price</td>
+            <td></td>
+            <td></td>
         </tr>
     </thead>
     <tbody>
@@ -13,6 +15,8 @@
             <td>{{item.id}}</td>
             <td><a [routerLink]="['view',item.id]">{{item.name}}</a></td>
             <td>{{item.price|currency:'INR'}}</td>
+            <td><a href=""><i class="fa fa-edit"></i></a></td>
+            <td><a (click)="deleteItem($event,item.id)" href=""><i class="fa fa-trash"></i></a></td>
         </tr>
     </tbody>
 </table>

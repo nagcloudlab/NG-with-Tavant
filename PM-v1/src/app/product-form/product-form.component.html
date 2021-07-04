@@ -1,1 +1,91 @@
-<p>product-form works!</p>
+<div class="row">
+    <div class="col-8">
+
+        <hr />
+        <pre>
+            {{productForm.value | json}}
+        </pre>
+
+        <div>
+            <!-- 
+            <hr />
+            ProductForm
+            <hr />
+            <pre>
+           
+            isPristine : {{productForm.pristine}}
+            isDirty    : {{productForm.dirty}}
+
+            isValid    : {{productForm.valid}}
+            isInvalid  : {{productForm.invalid}}
+
+            isTouched  : {{productForm.touched}}
+            isUntouched: {{productForm.untouched}}
+
+            </pre>
+            
+            
+            <hr />
+            ProductForm : Price control
+            <hr />
+            <pre>
+            isPristine : {{productForm.controls.price.pristine}}
+            isDirty    : {{productForm.controls.price.dirty}}
+
+            isValid    : {{productForm.controls.price.valid}}
+            isInvalid  : {{productForm.controls.price.invalid}}
+
+            isTouched  : {{productForm.controls.price.touched}}
+            isUntouched: {{productForm.controls.price.untouched}}
+            </pre> 
+            -->
+        </div>
+
+
+        <pre>
+            {{productForm.controls.elecSpec.errors | json}}
+        </pre>
+
+        <div class="card card-body">
+            <form [formGroup]="productForm" (submit)="handleSubmit($event)">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input class="form-control" formControlName="name" />
+                    <!-- 
+                    <div class="text-danger" 
+                         *ngIf="productForm.controls.name.invalid && productForm.controls.name.touched">
+                        {{productForm.controls.name.errors?.required?'Name is required':''}}
+                        {{productForm.controls.name.errors?.minlength?'Minimum 3 chars':''}}
+                    </div>        
+                    -->
+                    <div class="text-danger">{{errors['name']}}</div>
+                </div>
+                <div class="form-group">
+                    <label>Price</label>
+                    <input class="form-control" formControlName="price" />
+                </div>
+
+                <div class="form-group">
+                    <label>Product Type</label>
+                    <input (click)="changePtype('elec')" type="radio" value="elec" formControlName="ptype" /> Elec,
+                    &nbsp;
+                    <input (click)="changePtype('other')" type="radio" value="other" formControlName="ptype" /> Other
+                </div>
+
+                <div class="form-group">
+                    <label>Elec Product Spec</label>
+                    <textarea class="form-control" formControlName="elecSpec"></textarea>
+                </div>
+
+                <br />
+                <button (click)="loadProduct()" type="button" class="btn btn-warning">Load</button>
+                &nbsp;
+                <button class="btn btn-dark">Save</button>
+
+                <hr />
+
+            </form>
+        </div>
+
+    </div>
+</div>
