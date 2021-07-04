@@ -1,11 +1,7 @@
 
+// Ex: DI ( Dependency Injection )
 
 /*
-
-
-
-// DI ( Dependency Injection )
-
 
  shop-IT
  ---------

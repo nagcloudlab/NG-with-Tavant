@@ -1,5 +1,6 @@
 
-// Iterable objects
+//Ex:  Iterable objects
+
 
 let items=["item-1","item-2","item-3"]
 for(let item of items){
