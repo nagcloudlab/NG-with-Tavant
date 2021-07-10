@@ -26,6 +26,7 @@ export class CompFourComponent implements OnInit {
   arr: Array<string> = []
   ngDoCheck() {
     this.arr.push("checked")
+    console.log("CompFour :: ngDoCheck")
   }
 
 }

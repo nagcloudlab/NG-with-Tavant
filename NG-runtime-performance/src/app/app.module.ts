@@ -13,6 +13,8 @@ import { CompSixComponent } from './comp-six/comp-six.component';
 
 import { CompRootComponent } from './comp-root/comp-root.component';
 import { CartBadgeComponent } from './cart-badge/cart-badge.component';
+import { ZoneComponent } from './zone/zone.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { CartBadgeComponent } from './cart-badge/cart-badge.component';
     CompSixComponent,
     CompRootComponent,
     CartBadgeComponent,
+    NavbarComponent,
+    ZoneComponent,
   ],
   imports: [
     BrowserModule,

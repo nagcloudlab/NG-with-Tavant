@@ -34,6 +34,7 @@ export class CompSixComponent implements OnInit {
   arr: Array<string> = []
   ngDoCheck() {
     this.arr.push("checked")
+    console.log("CompSix :: ngDoCheck")
   }
 
 }

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-comp-two',
@@ -20,11 +20,13 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   </div>
   
   `,
-  changeDetection:ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CompTwoComponent implements OnInit {
 
   constructor() { }
+
+  @Input() prop = {}
 
   ngOnInit(): void {
   }
@@ -32,8 +34,9 @@ export class CompTwoComponent implements OnInit {
   arr: Array<string> = []
   ngDoCheck() {
     this.arr.push("checked")
+    console.log("CompTwo :: ngDoCheck")
   }
 
-  
+
 
 }

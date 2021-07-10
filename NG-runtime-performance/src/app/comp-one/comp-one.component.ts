@@ -35,6 +35,7 @@ export class CompOneComponent implements OnInit {
   arr: Array<string> = []
   ngDoCheck() {
     this.arr.push("checked")
+    console.log("CompOne :: ngDoCheck")
   }
 
 }

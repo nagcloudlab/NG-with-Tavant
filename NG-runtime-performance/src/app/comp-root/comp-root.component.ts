@@ -8,7 +8,7 @@ import { Subject } from 'rxjs';
 })
 export class CompRootComponent {
 
-  property = {}
+  property = {} // state
 
   toggleClass = "";
 
@@ -25,6 +25,9 @@ export class CompRootComponent {
   arr: Array<string> = []
   ngDoCheck() {
     this.arr.push("checked")
+    console.log("CompRoot :: ngDoCheck");
   }
+
+  
 
 }

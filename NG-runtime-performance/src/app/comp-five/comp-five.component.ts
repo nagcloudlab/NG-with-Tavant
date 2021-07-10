@@ -26,6 +26,7 @@ export class CompFiveComponent implements OnInit {
   arr: Array<string> = []
   ngDoCheck() {
     this.arr.push("checked")
+    console.log("CompFive :: ngDoCheck")
   }
 
 }

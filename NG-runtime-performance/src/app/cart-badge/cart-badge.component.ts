@@ -27,14 +27,12 @@ export class CartBadgeComponent implements OnInit {
 
   count = 0;
 
-  constructor(private cd: ChangeDetectorRef) { }
+  constructor(private cd:ChangeDetectorRef) { }
 
   ngOnInit(): void {
-    this.cd.detach();
     this.addItemStream.subscribe(() => {
+      console.log("cart-badge comp reacting buy event")
       this.count++; // application state changed
-      // this.cd.markForCheck();
-      this.cd.reattach();
       this.cd.markForCheck();
     })
   }
