@@ -28,9 +28,7 @@ export class ReviewFormComponent implements OnInit {
   }
 
   handleForm(event: any) {
-    
     event.stopPropagation();
-
     if (this.reviewForm.valid) {
       let formData = this.reviewForm.value
       this.submit.emit(formData)

@@ -1,0 +1,7 @@
+<div class="card card-body">
+    <form (submit)="handleSubmit($event)">
+        Name : <input [(ngModel)]="name" name="name"/>
+        <hr />
+        Hello , {{name}}
+    </form>
+</div>
