@@ -1,0 +1,23 @@
+<div class="container">
+  <hr />
+  <div> NG-Final-app</div>
+  <hr />
+
+
+  <button (click)="addItem()" class="btn btn-dark btn-lg">Add New Item</button>
+  <hr />
+  <ul>
+    <li class="list-group-item" 
+        [appHighlight]="color"
+        defaultColor="yellow"
+        *ngFor="let item of items;let i=index"
+        >
+        <div *appUnless="i%2==0">
+            {{item}} <a href (click)="deleteItem(i,$event)">delete</a>
+        </div>
+    </li>
+  </ul>
+  <hr />
+ 
+
+</div>

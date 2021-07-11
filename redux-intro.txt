@@ -1,0 +1,39 @@
+
+
+
+
+ how to work with Redux ?
+ -----------------------
+
+
+  steps:
+
+    step-1 : know your UI application state
+           e.g shop-IT
+
+                - items
+                - reviews
+                - cart
+                - user
+                - order
+                - etc...
+
+    step-2 : know action(s) which state-change ?
+              - LOAD_ACTION
+
+              - LOAD_REVIEWS  
+              - ADD_NEW_REVIEW      
+
+              - BUY
+
+              - LOGIN    
+
+    step-3 : create reducer(s) to make state based on action      
+               - itemsReducer
+               - cartReducer
+               - xxxxReducer
+
+
+    step-4: create rootReducer  i.e function composition
+
+    step-5: create 'store' with rootReducer + intial application state           
